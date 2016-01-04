@@ -1,12 +1,16 @@
 function fizzBuzz(number) {
-  if (number % 3 === 0 && number % 5 === 0) {
-    return "FizzBuzz";}
-    else if (number % 5 === 0) {
-      return "Buzz";}
-      else if (number % 3 === 0) {
-        return "Fizz";}
-        else {
-          return number;
-        }
+  if (this.isDivisibleBy(15, number)) {
+    return 'FizzBuzz';
+  }
+  if (this.isDivisibleBy(5, number)) {
+    return 'Buzz';
+  }
+  if (this.isDivisibleBy(3, number)) {
+    return 'Fizz';
+  }
+  return number;
+}
 
-};
+function isDivisibleBy(divisor, number) {
+  return number % divisor === 0;
+}
