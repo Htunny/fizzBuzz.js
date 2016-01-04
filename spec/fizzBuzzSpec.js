@@ -12,8 +12,8 @@ describe("fizzBuzz", function() {
     expect(fizzBuzz(10)).toEqual("Buzz")
   })
 
-  it("should return number if a number given is not divisible by 3 or 5 ", function() {
-    expect(fizzBuzz(11)).toEqual(11)
+  it("should not return Buzz if a number given is not divisible by 5 ", function() {
+    expect(fizzBuzz(12)).not.toEqual("Buzz")
   })
 
   it("should return FizzBuzz if a number given is divisible by 3 & 5 ", function() {
@@ -22,5 +22,9 @@ describe("fizzBuzz", function() {
 
   it("should not return FizzBuzz if a number given is not divisible by 3 & 5 ", function() {
     expect(fizzBuzz(14)).not.toEqual("FizzBuzz")
+  })
+
+  it("should return number if a number given is not divisible by 3 or 5 ", function() {
+    expect(fizzBuzz(11)).toEqual(11)
   })
 });
